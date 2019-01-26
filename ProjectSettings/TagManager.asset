@@ -50,3 +50,6 @@ TagManager:
   - name: EnvironementFront
     uniqueID: 1545722693
     locked: 0
+  - name: Effect
+    uniqueID: 1908884893
+    locked: 0
