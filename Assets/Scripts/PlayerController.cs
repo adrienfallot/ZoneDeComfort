@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rigidBody2D;
-    private bool moving = false;
 
 	[Header("Sprite")]
 	public Animator animator;
@@ -23,8 +22,6 @@ public class PlayerController : MonoBehaviour
         Vector2 move = Vector2.zero;
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
-
-        print(move);
 
         rigidBody2D.velocity = move * speed;
 
