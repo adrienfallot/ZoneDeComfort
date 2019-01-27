@@ -112,6 +112,7 @@ public class NPCTalk : MonoBehaviour
 					today.hasACroissant = false;
 					NPCAnimator.SetBool("Walking", false); //croissant
 					PlayerController.croissant = true;
+					AkSoundEngine.PostEvent("P_Success", gameObject);
 				}
 
 				textBulle.text = today.bye;
