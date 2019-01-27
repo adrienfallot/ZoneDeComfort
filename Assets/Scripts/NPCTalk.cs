@@ -33,6 +33,8 @@ public class NPCTalk : MonoBehaviour
     {
 		if (other.CompareTag("Player"))
 		{
+			AkSoundEngine.PostEvent("Env_Greet_Nice", this.gameObject); //TODO: comfort/discomfort
+
 			textBulle.text = days[DaysManager.dayNumber].greeting;
 			bulle.Play("Pop");
 		}
