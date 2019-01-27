@@ -9,6 +9,8 @@ public class NPCTalk : MonoBehaviour
 	public Text textBulle;
 	public Animator NPCAnimator;
 
+	public ComfortZone[] comfortZones;
+
 	private bool isTalking = false;
 	private bool bye = false;
 	private bool bullePop = false;
@@ -139,6 +141,11 @@ public class NPCTalk : MonoBehaviour
 		bullePop = false;
 		bye = false;
 		numberText = 0;
+
+		foreach (var comfortZone in comfortZones)
+		{
+			comfortZone.Expend();
+		} 
 	}
 
 }

@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class ComfortZone : MonoBehaviour
 {
+    public float scaleFactor;
+    public int maxNbScale;
+    private int nbScale;
+
     void OnTriggerExit2D(Collider2D other)
     {
         PlayerController.isDiscomfort = true;
@@ -16,5 +21,18 @@ public class ComfortZone : MonoBehaviour
     {
         PlayerController.isDiscomfort = false;
         AkSoundEngine.SetState("ST_Player_Confort", "Yes");
+    }
+
+    public void Expend()
+    {
+        if(nbScale == maxNbScale){
+            return;
+        }
+
+        Vector3 scale = this.transform.localScale;
+        scale += new Vector3(scaleFactor, scaleFactor, 0.0f);
+        this.transform.localScale = scale;
+
+        nbScale++;
     }
 }
