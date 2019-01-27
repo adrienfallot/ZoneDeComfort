@@ -277,6 +277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulle: {fileID: 95476817284691390}
   textBulle: {fileID: 114223880132450692}
+  NPCAnimator: {fileID: 95236419679518956}
+  hasACroissant: 0
   days:
   - greeting: Bonjours
     dialogue:

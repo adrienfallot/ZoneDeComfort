@@ -6,32 +6,16 @@ public class DaysManager : MonoBehaviour
 {
 	public static int dayNumber = 0;
 
-	[System.Serializable]
-	public struct Day
+	public static void StartDay()
 	{
-        public IGoal[] goals;
+		AkSoundEngine.SetState("ST_Time", "Day");
 	}
 
-    public Day[] days;
-
-
-	public void StartDay(int day)
+	public static void FinishDay()
 	{
-		IGoal[] dayGoals = days[day].goals;
-
-		foreach (IGoal goal in dayGoals)
+		foreach (NPCTalk npc in NPCTalk.NPC)
 		{
-			goal.StartGoal();
-		}
-	}
-
-	public void FinishDay(int day)
-	{
-		IGoal[] dayGoals = days[day].goals;
-
-		foreach (IGoal goal in dayGoals)
-		{
-			goal.MissGoal();
+			npc.FinishDay();
 		}
 	}
 }

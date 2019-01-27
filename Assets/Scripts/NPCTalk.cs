@@ -7,16 +7,22 @@ public class NPCTalk : MonoBehaviour
 {
 	public Animator bulle;
 	public Text textBulle;
+	public Animator NPCAnimator;
 
 	private bool isTalking = false;
 	private bool bye = false;
 	private bool bullePop = false;
 
 	private int numberText = 0;
+	private int numberDialogue = 0;
+
+	public static List<NPCTalk> NPC;
 
 	[System.Serializable]
 	public struct Day
 	{
+		public bool hasACroissant;
+
 		[Multiline]
 		public string greeting;
 		[Multiline]
@@ -44,7 +50,7 @@ public class NPCTalk : MonoBehaviour
 			{
 				AkSoundEngine.PostEvent("Env_Greet_Nice", this.gameObject); //TODO: comfort/discomfort
 
-				textBulle.text = days[DaysManager.dayNumber].greeting;
+				textBulle.text = days[numberDialogue].greeting;
 				bulle.Play("Pop");
 				bullePop = true;
 			}
@@ -69,20 +75,47 @@ public class NPCTalk : MonoBehaviour
 		}
     }
 
-	 // Update is called once per frame
+	void Awake()
+	{
+		if(NPC == null){
+			NPC = new List<NPCTalk>();
+		}
+
+		NPC.Add(this);
+
+		NPCAnimator.SetBool("Walking", days[numberDialogue].hasACroissant); //croissant
+	}
+
+	// Update is called once per frame
     void Update()
     {
 		if (Input.GetButtonDown("Interact") && isTalking)
 		{
+			Day today = days[numberDialogue];
+
 			if (!bye)
 			{
-				textBulle.text = days[DaysManager.dayNumber].dialogue[numberText];
-				numberText ++;
-				bye = days[DaysManager.dayNumber].dialogue.Length == numberText;
+				if (today.dialogue.Length == 0)
+				{
+					textBulle.text = today.greeting;
+				}
+				else
+				{
+					textBulle.text = today.dialogue[numberText];
+					numberText ++;
+					bye = today.dialogue.Length == numberText;
+				}
 			}
 			else
 			{
-				textBulle.text = days[DaysManager.dayNumber].bye;
+				if (today.hasACroissant){
+					today.hasACroissant = false;
+					NPCAnimator.SetBool("Walking", false); //croissant
+					PlayerController.croissant = true;
+					AkSoundEngine.PostEvent("P_Success", gameObject);
+				}
+
+				textBulle.text = today.bye;
 
 				if (!bullePop)
 				{
@@ -96,6 +129,11 @@ public class NPCTalk : MonoBehaviour
 	public void FinishDay()
 	{
 		bulle.Play("Unpop");
+
+		if (bye)
+		{
+			numberDialogue++;
+		}
 
 		isTalking = false;
 		bullePop = false;
