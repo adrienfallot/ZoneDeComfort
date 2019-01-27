@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 	public Animator animator;
 	public SpriteRenderer spriteRenderer;
 
+    public static bool croissant = false;
+
     void Start()
     {
         AkSoundEngine.SetSwitch("SW_Game_Status", "Game", this.gameObject);

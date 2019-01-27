@@ -10,6 +10,7 @@ public class ComfortZone : MonoBehaviour
     {
         discomfortImage.SetActive(true);
         AkSoundEngine.SetState("ST_Player_Confort", "No");
+        AkSoundEngine.PostEvent("Amb_Creep", this.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other)
