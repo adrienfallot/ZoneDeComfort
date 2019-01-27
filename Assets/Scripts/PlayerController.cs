@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 	public SpriteRenderer spriteRenderer;
 
     public static bool croissant = false;
+    public static bool hasQuest = false;
+    public static bool hasPackage = false;
     public static bool isDiscomfort = false;
 
     public static float timerDiscomfort = 0.0f;
