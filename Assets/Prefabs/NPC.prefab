@@ -225,7 +225,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
@@ -277,7 +277,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulle: {fileID: 95476817284691390}
   textBulle: {fileID: 114223880132450692}
-  days: []
+  days:
+  - greeting: Bonjours
+    dialogue:
+    - Bla1
+    - Bla2
+    - Bla3
+    bye: Bonsoir
 --- !u!114 &114923627024653884
 MonoBehaviour:
   m_ObjectHideFlags: 1
