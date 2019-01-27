@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 4e2125b86d3fffd488797d18f91ee1ab
+timeCreated: 1524664207
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Poteau: {fileID: 1733324479872344, guid: fa72ca12f6e55c543ab6271b22ed9119, type: 2}
+  - Parent_Poteaux: {fileID: 1202081868953348, guid: 52d3e10e600616249aaaa5a1a84f1a90,
+      type: 2}
+  - Chemin: {fileID: 1075903290856180, guid: 7960d8b345a89ac4e87e2bc3c4549f87, type: 2}
+  - Parent_Buildings: {fileID: 1202081868953348, guid: 5b8c06ec35d4f2b4ebe1b92e19b70e82,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
