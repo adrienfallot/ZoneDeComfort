@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class ComfortZone : MonoBehaviour
 {
-    public GameObject comfortImage;
+    public GameObject discomfortImage;
 
     void OnTriggerExit2D(Collider2D other)
     {
-        comfortImage.SetActive(true);
+        discomfortImage.SetActive(true);
+        AkSoundEngine.SetState("ST_Player_Confort", "No");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        comfortImage.SetActive(false);
+        discomfortImage.SetActive(false);
+        AkSoundEngine.SetState("ST_Player_Confort", "Yes");
     }
 }

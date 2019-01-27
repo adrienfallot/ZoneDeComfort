@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DaysManager : MonoBehaviour
 {
+	public static int dayNumber = 0;
+
 	[System.Serializable]
 	public struct Day
 	{

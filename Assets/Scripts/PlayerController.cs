@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rigidBody2D;
-    private bool moving = false;
+
+	[Header("Zone")]
+    public Transform[] comfortZone;
 
 	[Header("Sprite")]
 	public Animator animator;
@@ -14,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        AkSoundEngine.SetSwitch("SW_Game_Status", "Game", this.gameObject);
+
         rigidBody2D = this.GetComponent<Rigidbody2D>();
     }
 
@@ -23,8 +27,6 @@ public class PlayerController : MonoBehaviour
         Vector2 move = Vector2.zero;
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
-
-        print(move);
 
         rigidBody2D.velocity = move * speed;
 
@@ -48,5 +50,13 @@ public class PlayerController : MonoBehaviour
             AkSoundEngine.PostEvent("P_Walk_Stop", this.gameObject);
         }
 
+        float closeZone = Mathf.Infinity;
+
+        foreach (Transform zone in comfortZone)
+        {
+            float dist = Vector3.Distance(zone.position, this.transform.position);
+            closeZone = (dist < closeZone ? dist : closeZone);
+        }
+        AkSoundEngine.SetRTPCValue("RTPC_D_Closest_Zone", closeZone);
     }
 }
