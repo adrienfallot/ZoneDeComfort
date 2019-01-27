@@ -260,6 +260,8 @@ GameObject:
   - component: {fileID: 404964105}
   - component: {fileID: 404964104}
   - component: {fileID: 404964108}
+  - component: {fileID: 404964107}
+  - component: {fileID: 404964106}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -307,6 +309,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404964106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404964103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7430f86dba2644ad9c9c156d75e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc772a75f9754084ba52ba61a28e5fe1,
+      type: 2}
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 
+  multiPositionArray: []
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+--- !u!114 &404964107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404964103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2952361386ffff642a6b4d16ff06b078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &404964108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,9 +1143,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
-      propertyPath: NPCAnimator
-      value: 
-      objectReference: {fileID: 1827231204}
+      propertyPath: days.Array.data[0].hasACroissant
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -1613,11 +1664,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4270669641204594, guid: 985afff4e2fee0b4599862e333c61bf8,
     type: 2}
   m_PrefabInternal: {fileID: 630870344}
---- !u!95 &1827231204 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95236419679518956, guid: fa221312f7912104793491f258d9e8e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1244672124}
 --- !u!1001 &1941072772
 Prefab:
   m_ObjectHideFlags: 0
