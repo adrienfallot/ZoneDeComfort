@@ -11,6 +11,8 @@ public class Generation_procedurale : MonoBehaviour {
     //La distance entre chaque poteau
     //public GameObject Parent_Buildings;
 
+    private int oldvariete;
+
     [Header("Correction du chemin")]
     public bool Noeud_final_concave;
 
@@ -304,23 +306,40 @@ public class Generation_procedurale : MonoBehaviour {
 	}
 
 	private void Instantiate_pylones (int i, int ibis) {
-
+        
 		//Je regarde combien de poteaux je vais mettre et le reste de longueur que j'aurais
 		length = Vector3.Distance(noeuds[i].position, noeuds[ibis].position);
+        
+        int jend = (int)(length / Distance_séparation);
+        int j = 1;
 
-		if ((length + restedist) >= Distance_séparation) {
+        //Le vecteur allant du premier point au second
+        Vector3 arctempfull = noeuds[ibis].position - noeuds[i].position;
+        Vector3 arctemp = Vector3.Normalize(arctempfull);
 
-			for (int j = 1; j <= (int)((length + restedist) / Distance_séparation); j++) {
+        //Le vecteur précédent
+        if ((i > 0) && (ibis > 0))
+        {
+            Vector3 pastarctempfull = noeuds[ibis - 1].position - noeuds[i - 1].position;
+            Vector3 pastarctemp = Vector3.Normalize(pastarctempfull);
+
+            if (Vector3.SignedAngle(pastarctemp, arctemp, Vector3.forward) > 0)
+            {
+                restedist -= 3 * Distance_séparation;
+                j = (int)(length / Distance_séparation) + 3;
+                jend = (int)(length / Distance_séparation) - 3;
+            }
+        }
+
+        if ((length + restedist) >= Distance_séparation) {
+
+			for (j = 1; j <= jend; j++) {
 
 				//Je déclare mon angle pour les poteaux qui suivent la pente
 				Quaternion anglequat = Quaternion.identity;
 
-				//Le vecteur allant du premier point au second
-				Vector3 arctempfull = noeuds [ibis].position - noeuds [i].position;
-				Vector3 arctemp = Vector3.Normalize (arctempfull);
-
-				//Le point où je vais faire poper mon poteau
-				spawnPoint = noeuds [i].position + (j * arctemp * Distance_séparation) - (restedist * arctemp);
+                //Le point où je vais faire poper mon poteau
+                spawnPoint = noeuds [i].position + (j * arctemp * Distance_séparation) - (restedist * arctemp);
 
 				if (Aligner_mobilier_avec_pentes) {
 					//Je fais un raycast pour que ce soit propre
@@ -335,13 +354,22 @@ public class Generation_procedurale : MonoBehaviour {
 
 				else {
 					//L'angle que je veux pour le poteau
-					angle = Vector3.Cross (Vector3.down, arctemp);
-					angle = new Vector3 (0, Vector3.SignedAngle (Vector3.right, angle, Vector3.up), 0);
+					angle = new Vector3 (0, 0, Vector3.SignedAngle(Vector3.right, arctemp, Vector3.forward));
 					angle = angle + Rotation_mobilier;
 				}
 
-				//J'instancie le poteau en tant que prefab
-				int variete = nb_variations % Mobilier_urbain.Length;
+                int caseof = 0;
+                int variete = oldvariete;
+
+                //J'instancie le poteau en tant que prefab
+                while (oldvariete == variete)
+                {
+                    caseof++;
+                    variete = Random.Range(0, Mobilier_urbain.Length);
+                    if (caseof >= 1000)
+                        break;
+                }
+                oldvariete = variete;
 				poteauclone = PrefabUtility.InstantiatePrefab (Mobilier_urbain [variete]) as GameObject;
 
 				//Je lui dit de passer au gameobject suivant dans la liste des gameobjects
@@ -360,13 +388,10 @@ public class Generation_procedurale : MonoBehaviour {
                 {
                     poteauclone.transform.rotation = Quaternion.Euler(angle);
                 }
-
 			}
 		}
-
 		//Je détermine le reste de la distance qu'il me restait à parcourir
 		restedist = (length + restedist) % Distance_séparation;
-
 	}
 
 	public void BuildPylones()

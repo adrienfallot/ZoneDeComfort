@@ -964,9 +964,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1446110455033420}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 2.79, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 6, z: -0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4051948142774146}
   - {fileID: 4036379624956316}
@@ -1006,7 +1006,7 @@ Transform:
   - {fileID: 4490627552239822}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &4903472697346420
 Transform:
   m_ObjectHideFlags: 1
@@ -1111,9 +1111,13 @@ MonoBehaviour:
   Distance: 3.2
   Chemin_interne: 0
   Mobilier_urbain:
-  - {fileID: 1077727596195596, guid: 7e56f4edc3b65e442b23d07fc4552956, type: 2}
-  - {fileID: 1954016742952608, guid: 50cc56cda3a716343893c6317ed9548f, type: 2}
-  "Distance_s\xE9paration": 1
+  - {fileID: 1090951150737954, guid: 7c0b4fb3dcfb9fb4493e6e611233be14, type: 2}
+  - {fileID: 1353463029115548, guid: f9b74789623c92945b74e2497b095664, type: 2}
+  - {fileID: 1092217423827094, guid: e6eb4597d2ac7b0408411ade386b4830, type: 2}
+  - {fileID: 1524734587508682, guid: 7008f1714617a2a42bdb4b06c05be463, type: 2}
+  - {fileID: 1899436965145280, guid: 7e89155be3060124ebf9a44713f6062c, type: 2}
+  - {fileID: 1962048533309272, guid: e89d8962291130140b6af7777c8bdbca, type: 2}
+  "Distance_s\xE9paration": 3.332
   "D\xE9calage_initial": 0
   Rotation_mobilier: {x: 0, y: 0, z: 0}
   Aligner_mobilier_avec_pentes: 0
