@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rigidBody2D;
 
-	[Header("Zone")]
+    [Header("Zone")]
     public Transform[] comfortZone;
 
-	[Header("Sprite")]
-	public Animator animator;
-	public SpriteRenderer spriteRenderer;
+    [Header("Sprite")]
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     public static bool croissant = false;
     public static bool hasQuest = false;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
         rigidBody2D.velocity = move * speed;
 
-        if ((move.x != 0.0f || move.y != 0.0f) && !animator.GetBool("Walking"))
+        if ((move.x != 0.0f || move.y != 0.0f))
         {
             if (move.x < 0.0f)
             {
@@ -55,8 +55,11 @@ public class PlayerController : MonoBehaviour
                 spriteRenderer.flipX = true;
             }
 
-            animator.SetBool("Walking", true);
-            AkSoundEngine.PostEvent("P_Walk", this.gameObject);
+            if (!animator.GetBool("Walking"))
+            {
+                animator.SetBool("Walking", true);
+                AkSoundEngine.PostEvent("P_Walk", this.gameObject);
+            }
         }
         else if (move.x == 0.0f && move.y == 0.0f && animator.GetBool("Walking"))
         {
@@ -103,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
     float Map(float s, float a1, float a2, float b1, float b2)
     {
-        return b1 + (s-a1)*(b2-b1)/(a2-a1);
+        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
     }
 
     void FixedUpdate()

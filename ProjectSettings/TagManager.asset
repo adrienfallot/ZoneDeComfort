@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Chemin
   - Poteaux
+  - Exit
+  - Enter
   layers:
   - Default
   - TransparentFX
