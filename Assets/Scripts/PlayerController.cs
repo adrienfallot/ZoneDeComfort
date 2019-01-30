@@ -18,10 +18,12 @@ public class PlayerController : MonoBehaviour
     public static bool croissant = false;
     public static bool hasQuest = false;
     public static bool hasPackage = false;
-    public static bool isDiscomfort = false;
+    public bool isDiscomfort = false;
 
-    public static float timerDiscomfort = 0.0f;
+    public float timerDiscomfort = 0.0f;
     public float timerDiscomfortMax = 10.0f;
+    public int nbComfortZones = 0;
+    private float closeZone;
 
     public PostProcessingBehaviour postProcessing;
     private PostProcessingProfile discomfortProfile;
@@ -35,8 +37,33 @@ public class PlayerController : MonoBehaviour
         discomfortProfile = postProcessing.profile;
     }
 
-    // Update is called once per frame
-    void Update()
+    void IsInComfortZone ()
+    {
+        if (nbComfortZones > 0)
+            isDiscomfort = false;
+        else
+            isDiscomfort = true;
+    }
+
+    void ResetDiscomfortTime ()
+    {
+        timerDiscomfort = 0.0f;
+    }
+
+    void SetSound ()
+    {
+        if (isDiscomfort)
+        {
+            AkSoundEngine.SetState("ST_Player_Confort", "No");
+            AkSoundEngine.PostEvent("Amb_Creep", this.gameObject);
+        }
+        else
+        {
+            AkSoundEngine.SetState("ST_Player_Confort", "Yes");
+        }
+    }   
+    
+    void MoveCharacter ()
     {
         Vector2 move = Vector2.zero;
         move.x = Input.GetAxisRaw("Horizontal");
@@ -66,22 +93,37 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Walking", false);
             AkSoundEngine.PostEvent("P_Walk_Stop", this.gameObject);
         }
+    }
 
-        float closeZone = Mathf.Infinity;
+    void DistComfortZone ()
+    {
+        //Pour déterminer la distance la plus faible séparant d'une limite de zone
+        closeZone = Mathf.Infinity;
 
         foreach (Transform zone in comfortZone)
         {
-            float dist = Vector3.Distance(zone.position, this.transform.position);
+            //La distance est celle entre le joueur et le centre de la zone moins son rayon
+            float dist = Vector3.Distance(zone.position, this.transform.position) - (zone.GetComponent<CircleCollider2D>().radius * zone.transform.lossyScale.x);
             closeZone = (dist < closeZone ? dist : closeZone);
         }
-        AkSoundEngine.SetRTPCValue("RTPC_D_Closest_Zone", closeZone);
 
+        //Si des imprécisions font que la valeur est négative, je l'arrondie à 0
+        if (closeZone < 0)
+            closeZone = 0;
+
+        AkSoundEngine.SetRTPCValue("RTPC_D_Closest_Zone", closeZone);
+    }
+
+    void PostProcessIncomfort ()
+    {
         if (isDiscomfort)
         {
             postProcessing.enabled = true;
 
             var grain = discomfortProfile.grain.settings;
             var vignette = discomfortProfile.vignette.settings;
+
+            Debug.Log("Time = " + timerDiscomfort + " / " + timerDiscomfortMax);
 
             if (timerDiscomfort <= timerDiscomfortMax)
             {
@@ -102,6 +144,23 @@ public class PlayerController : MonoBehaviour
         {
             postProcessing.enabled = false;
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        //Je check si le joueur est dans une comfort zone
+        IsInComfortZone();
+        //Je met le son bien en fonction de son état
+        SetSound();
+
+        //Je bouge le perso selon les inputs
+        MoveCharacter();
+
+        //Je détermine la distance jusqu'à la prochaine zone de confort
+        DistComfortZone();
+
+        //Je modifie l'effet de postprocessing correctement
+        PostProcessIncomfort();
     }
 
     float Map(float s, float a1, float a2, float b1, float b2)
