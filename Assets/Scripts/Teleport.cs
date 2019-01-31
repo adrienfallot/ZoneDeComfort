@@ -8,11 +8,14 @@ public class Teleport : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
     {
-		other.gameObject.transform.position = target.gameObject.transform.position;
+        if (other.tag == "Player")
+        {
+            other.gameObject.transform.position = target.gameObject.transform.position;
 
-        if (this.tag == "Exit")
-            Camera.main.orthographicSize = 10;
-        if (this.tag == "Enter")
-            Camera.main.orthographicSize = 5;
+            if (this.tag == "Exit")
+                Camera.main.orthographicSize = 10;
+            if (this.tag == "Enter")
+                Camera.main.orthographicSize = 5;
+        }
     }
 }
