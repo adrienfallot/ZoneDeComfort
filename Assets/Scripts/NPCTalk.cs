@@ -16,14 +16,16 @@ public class NPCTalk : MonoBehaviour
     private bool bullePop = false;
 
     private int numberText = 0;
+    [SerializeField]
     private int numberDialogue = 0;
 
     public static List<NPCTalk> NPC;
 
+    public bool[] hasACroissant = new bool[7];
+
     [System.Serializable]
     public struct Day
     {
-        public bool hasACroissant;
 
         [Multiline]
         public string greeting;
@@ -86,7 +88,7 @@ public class NPCTalk : MonoBehaviour
 
         NPC.Add(this);
 
-        NPCAnimator.SetBool("Walking", days[numberDialogue].hasACroissant); //croissant
+        NPCAnimator.SetBool("Walking", hasACroissant[numberDialogue]); //croissant
     }
 
     // Update is called once per frame
@@ -111,11 +113,9 @@ public class NPCTalk : MonoBehaviour
             }
             else
             {
-                if (today.hasACroissant)
+                if (hasACroissant[numberDialogue])
                 {
-                    Debug.Log("Before" + today.hasACroissant);
-                    today.hasACroissant = false;
-                    Debug.Log("After" + today.hasACroissant);
+                    hasACroissant[numberDialogue] = false;
                     NPCAnimator.SetBool("Walking", false); //croissant
                     PlayerController.croissant = true;
                     AkSoundEngine.PostEvent("P_Success", gameObject);
@@ -136,20 +136,27 @@ public class NPCTalk : MonoBehaviour
     {
         bulle.Play("Unpop");
 
+        //Si j'ai parlé totalement à la personne
         if (bye)
         {
-            numberDialogue++;
+            //Je m'assure de pas dépasser le nombre de jour total du perso
+            if (numberDialogue != days.Length - 1)
+                numberDialogue++;
+
+            if (hasACroissant[numberDialogue])
+            NPCAnimator.SetBool("Walking", true); //croissant
+
+            //J'augmente la taille de la zone de confort
+            foreach (var comfortZone in comfortZones)
+            {
+                comfortZone.Expend();
+            }
         }
 
         isTalking = false;
         bullePop = false;
         bye = false;
         numberText = 0;
-
-        foreach (var comfortZone in comfortZones)
-        {
-            comfortZone.Expend();
-        }
     }
 
 }

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rigidBody2D;
+    public bool Stopped;
 
     [Header("Zone")]
     public Transform[] comfortZone;
@@ -81,8 +82,12 @@ public class PlayerController : MonoBehaviour
     void MoveCharacter()
     {
         Vector2 move = Vector2.zero;
-        move.x = Input.GetAxisRaw("Horizontal");
-        move.y = Input.GetAxisRaw("Vertical");
+
+        if (!Stopped)
+        {
+            move.x = Input.GetAxisRaw("Horizontal");
+            move.y = Input.GetAxisRaw("Vertical");
+        }
 
         rigidBody2D.velocity = move * speed;
 
