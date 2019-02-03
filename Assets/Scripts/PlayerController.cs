@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     public static float currentzoom;
     public float zoominside = 5f, zoomoutside = 10f;
 
-    void Start()
+    void Awake()
     {
         currentzoom = zoominside;
 

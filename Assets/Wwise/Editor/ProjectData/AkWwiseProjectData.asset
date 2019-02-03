@@ -422,5 +422,10 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GGJ19_SD_ZIK
+  - /GGJ19_SD_ZIK/Events
+  - /GGJ19_SD_ZIK/Events/Default Work Unit
+  - /GGJ19_SD_ZIK/Events/Default Work Unit/Ambiance
+  - /GGJ19_SD_ZIK/Events/Default Work Unit/Environnement
+  - /GGJ19_SD_ZIK/Events/Default Work Unit/Player
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

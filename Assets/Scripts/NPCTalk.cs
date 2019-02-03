@@ -19,7 +19,8 @@ public class NPCTalk : MonoBehaviour
 
     [HideInInspector]
     public int numberText = 0;
-    private int numberDialogue = 0;
+    //[HideInInspector]
+    public int numberDialogue = 0;
 
     public static List<NPCTalk> NPC;
 
@@ -58,7 +59,7 @@ public class NPCTalk : MonoBehaviour
             {
                 AkSoundEngine.PostEvent("Env_Greet_Nice", this.gameObject); //TODO: comfort/discomfort
 
-                textBulle.text = days[numberDialogue].greeting;
+                textBulle.text = " " + days[numberDialogue].greeting + " ";
                 bulle.Play("Pop");
                 bullePop = true;
             }
@@ -83,7 +84,7 @@ public class NPCTalk : MonoBehaviour
         }
     }
 
-    void SetFont ()
+    void SetFont()
     {
         //Si je suis en zone de confort
         if (!ThePlayer.isDiscomfort)
@@ -123,11 +124,11 @@ public class NPCTalk : MonoBehaviour
             {
                 if (today.dialogue.Length == 0)
                 {
-                    textBulle.text = today.greeting;
+                    textBulle.text = " " + today.greeting + " ";
                 }
                 else
                 {
-                    textBulle.text = today.dialogue[numberText];
+                    textBulle.text = " " + today.dialogue[numberText] + " ";
                     numberText++;
                     bye = today.dialogue.Length == numberText;
                 }
@@ -142,7 +143,7 @@ public class NPCTalk : MonoBehaviour
                     AkSoundEngine.PostEvent("P_Success", gameObject);
                 }
 
-                textBulle.text = today.bye;
+                textBulle.text = " " + today.bye + " ";
 
                 if (!bullePop)
                 {
@@ -165,7 +166,7 @@ public class NPCTalk : MonoBehaviour
                 numberDialogue++;
 
             if (hasACroissant[numberDialogue])
-            NPCAnimator.SetBool("Walking", true); //croissant
+                NPCAnimator.SetBool("Walking", true); //croissant
 
             //J'augmente la taille de la zone de confort
             foreach (var comfortZone in comfortZones)

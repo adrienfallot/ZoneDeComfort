@@ -12,7 +12,8 @@ public class Coffee_Come_In : MonoBehaviour
 
     public float newzoom;
     public float speedzoom;
-    private float tempzoom;
+    [HideInInspector]
+    public static float tempzoom;
 
     private bool isTalking = false;
     private bool bullePop = false;
@@ -67,7 +68,7 @@ public class Coffee_Come_In : MonoBehaviour
     private void Start()
     {
         LaCamera = Camera.main;
-        tempzoom = Camera.main.orthographicSize;
+        tempzoom = PlayerController.currentzoom;
     }
 
     void DeZoom()

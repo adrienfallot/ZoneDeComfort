@@ -591,6 +591,11 @@ Prefab:
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -6952,7 +6957,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -7584,6 +7589,11 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
@@ -8886,7 +8896,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].dialogue.Array.data[2]
-      value: "Or when they're just thinking about the next cup.\r"
+      value: "Or when they're just thinking about the\nnext cup.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -8921,7 +8931,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].greeting
-      value: "Why am I standing in front of this coffee shop all day ?\r"
+      value: "Why am I standing in front of this\ncoffee shop all day ?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -8956,7 +8966,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[1]
-      value: "As it was rock freezing cold, she offered me a cup\r"
+      value: "As it was rock freezing cold, she offered\nme a cup\r."
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -8976,12 +8986,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[0]
-      value: "The coffee lady just roasted some fresh beans.\r"
+      value: "The coffee lady just roasted some\nfresh beans.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[1]
-      value: "I don't like the smell of a cup of coffee\r"
+      value: "I don't like the smell of a cup of coffee\r."
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -9061,7 +9071,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[4]
-      value: "Did you know there was something called \"Latte Art\" ?\r"
+      value: "Did you know there was something\ncalled \"Latte Art\" ?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -9256,7 +9266,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[3]
-      value: "And she put milk in a coffee cup, before handing it to me !\r"
+      value: "And she put milk in a coffee cup, before\nhanding it to me !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -9361,6 +9371,11 @@ Prefab:
       propertyPath: comfortZones.Array.data[0]
       value: 
       objectReference: {fileID: 83262662}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -9818,7 +9833,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.size
-      value: 7
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: hasACroissant.Array.size
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -9838,22 +9858,32 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.size
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.size
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].dialogue.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.size
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10082,7 +10112,8 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].bye
-      value: "The post office is in the eastern part of town.\r"
+      value: "The post office is in the eastern part of town.\r\nMeet me at my house,
+        see you boy!"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -10092,7 +10123,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[0]
-      value: "Ok, no hurry, the post office is in the eastern part of town.\r"
+      value: "Ok, no hurry, the post office is in the\neastern part of town.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -10107,38 +10138,37 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].bye
-      value: "I should go back there. Raoul and I had such a good time there.\r"
+      value: "Ok, no hurry, the post office is in the\neastern part of town.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].greeting
-      value: "Hello! Thanks again for the parcel.\r"
+      value: "Hello! Have you got my parcel?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[0]
-      value: "I'm having such fun, just listening to the seashell.\r"
+      value: "Fantastic! Finally, I will be able to\nspell \"Zygomatic\" again!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[1]
-      value: "I feel like I'm back there, far away, exploring the unknown.\r"
+      value: "These damn Scrabble tiles get lost so easily.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[2]
-      value: "My husband always had great ideas of where to go.\r"
+      value: "Oh wait, there's something else in it.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].bye
-      value: "You should try it, and tell us about it. I'd love to hear stories about
-        the world.\r"
+      value: "I should go back there. Raoul and I\nhad such a good time there.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[3]
-      value: "And I don't want to cross my husband on the way.\r"
+      value: "And I don't want to cross my husband\non the way.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -10148,22 +10178,22 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[3]
-      value: "He probably still has. He's so passionate. To much if you ask me.\r"
+      value: "It's a seashell! I never ordered any seashell.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[4]
-      value: "Sometimes too much is nice though.\r"
+      value: "I wonder where it does come from.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[5]
-      value: "I'd like to leave the town and go on an adventure again.\r"
+      value: "It's nice, it reminds me of the time\nI spent by the sea when I travelled.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[6]
-      value: "Maybe later.\r"
+      value: "It's nice, it reminds me of the time I spent by the sea when I travelled.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -10358,12 +10388,13 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[4]
-      value: "The post office is in the eastern part of town.\r"
+      value: "When you'll have it, meet me at my house, \nit's just on the other side
+        of the street"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[5]
-      value: "Do you know how to play \"Bellimey\"?\r"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -10507,6 +10538,103 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_MaxSize
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].greeting
+      value: "Hello! Thanks again for the parcel.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.data[0]
+      value: "I'm having such fun, just listening to\nthe seashell.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.data[1]
+      value: "I feel like I'm back there, far away,\nexploring the unknown.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.data[2]
+      value: "My husband always had great ideas of\nwhere to go.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.data[3]
+      value: "He probably still has. He's so passionate.\nTo much if you ask me.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.data[4]
+      value: "Sometimes too much is nice though.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.data[5]
+      value: "I'd like to leave the town and go on\nan adventure again.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].dialogue.Array.data[6]
+      value: "Maybe later.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[7].bye
+      value: "You should try it, and tell us about it.\nI'd love to hear stories about
+        the world.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].greeting
+      value: "Hello! Thanks again for the parcel.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.data[0]
+      value: "I'm having such fun, just listening to the seashell.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.data[1]
+      value: "I feel like I'm back there, far away, exploring the unknown.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.data[2]
+      value: "My husband always had great ideas of where to go.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.data[3]
+      value: "He probably still has. He's so passionate. To much if you ask me.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.data[4]
+      value: "Sometimes too much is nice though.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.data[5]
+      value: "I'd like to leave the town and go on an adventure again.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].dialogue.Array.data[6]
+      value: "Maybe later.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[8].bye
+      value: "You should try it, and tell us about it. I'd love to hear stories about
+        the world.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
@@ -14231,6 +14359,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4191631822723176, guid: e6eb4597d2ac7b0408411ade386b4830,
     type: 2}
   m_PrefabInternal: {fileID: 767191842}
+--- !u!1 &773843118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773843119}
+  m_Layer: 0
+  m_Name: TP_GrandMere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773843119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773843118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.34, y: 1.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 917684123}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &774989361
 Prefab:
   m_ObjectHideFlags: 0
@@ -14725,7 +14881,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[1]
-      value: "The sky never was so clear. Except yesterday. And the day before\u2026\r"
+      value: "The sky never was so clear. Except yesterday.\nAnd the day before\u2026\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -14750,12 +14906,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].dialogue.Array.data[1]
-      value: "It's getting increasingly hotter. Summer is coming.\r"
+      value: "It's getting increasingly hotter. \nSummer is coming.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].dialogue.Array.data[2]
-      value: "Soon, it will be so hot, the water will only take 3 hours to freeze!\r"
+      value: "Soon, it will be so hot, the water\n will only take 3 hours to freeze!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -14800,12 +14956,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[1]
-      value: "Still sunny, still cold! That's cool, well cold actually, mate!\r"
+      value: "Still sunny, still cold! That's cool,\nwell cold actually, mate!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[2]
-      value: "Nobody's interested by the weather. But someone has talk about it.\r"
+      value: "Nobody's interested by the weather.\nBut someone has talk about it.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -14825,12 +14981,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[1]
-      value: "Look at the sun, but not too much, you could blind yourself!\r"
+      value: "Look at the sun, but not too much,\nyou could blind yourself!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[2]
-      value: "Someone in town tried once. Now she has to wear shades.\r"
+      value: "Someone in town tried once. \nNow she has to wear shades.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -14850,12 +15006,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[1]
-      value: "The weather's always the same here : beautiful! And cold.\r"
+      value: "The weather's always the same here : \nbeautiful! And cold.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[2]
-      value: "I've always wanted to see a storm. But I've never left this town.\r"
+      value: "I've always wanted to see a storm.\nBut I've never left this town.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -15008,6 +15164,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
@@ -15874,7 +16035,9 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].dialogue.Array.data[1]
-      value: I like it, I went on so many adventures with my wife.
+      value: 'I like it, I went on so many adventures
+
+        with my wife.'
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -15889,7 +16052,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].greeting
-      value: "Hello again! You seem more confident than yesterday.\r"
+      value: "Hello again! You seem more confident\nthan yesterday.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -15899,7 +16062,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[1]
-      value: "You're scared, you go there, and then you're not scared anymore.\r"
+      value: "You're scared, you go there, and then\nyou're not scared anymore.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -15919,7 +16082,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].dialogue.Array.data[0]
-      value: "Did you know you could hear the sea if you listened to a seashell?\r"
+      value: "Did you know you could hear the sea\nif you listened to a seashell?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -15939,7 +16102,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].greeting
-      value: "Hello! Perfect day to go on an adventure! Don't you think?\r"
+      value: "Hello! Perfect day to go on an adventure!\nDon't you think?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -16074,12 +16237,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[3]
-      value: "Actually, my wife still scares me, after all this time.\r"
+      value: "Actually, my wife still scares me, after\nall this time.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[4]
-      value: "Does it mean being with her was some sort of an adventure.\r"
+      value: "Does it mean being with her was some\nsort of an adventure.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -16094,7 +16257,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[7]
-      value: "But I'm pretty sure the word \"Supercalifragilisticexpialidocious\"
+      value: "But I'm pretty sure the word\n\"Supercalifragilisticexpialidocious\"
         exists\r."
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
@@ -16105,12 +16268,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[3]
-      value: "SPACE! I like space! Seems to be a nice place, space.\r"
+      value: "SPACE! I like space! Seems to be a nice place,\nspace.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[4]
-      value: "You could go to Slough, or Scranton, or Angoulag!\r"
+      value: "You could go to Slough, or Scranton,\nor Angoulag!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -16120,7 +16283,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[6]
-      value: "Even going out this town is an adventure in itself!\r"
+      value: "Even going out this town is an adventure\nin itself!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -16229,6 +16392,11 @@ Prefab:
       propertyPath: comfortZones.Array.data[0]
       value: 
       objectReference: {fileID: 1714977499}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -17654,6 +17822,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2036692123}
+  - {fileID: 773843119}
   m_Father: {fileID: 1472647769}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19006,7 +19175,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[2]
-      value: "But my parents don't want me to. They say I'm too young.\r"
+      value: "But my parents don't want me to.\nThey say I'm too young.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -19361,6 +19530,11 @@ Prefab:
       propertyPath: comfortZones.Array.data[0]
       value: 
       objectReference: {fileID: 1566061436}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -20436,12 +20610,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.size
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -20455,11 +20629,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 380.77
+      value: 380.78
       objectReference: {fileID: 0}
     - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -49.27
+      value: -49.16
       objectReference: {fileID: 0}
     - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -20560,142 +20734,150 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].greeting
-      value: "Good morning !\r"
+      value: Hello ! You'll never guess !
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].dialogue.Array.data[0]
-      value: "I'm quite surprised to see you !\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[0].dialogue.Array.data[1]
-      value: "Nobody cares about letters and parcels anymore.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[0].dialogue.Array.data[2]
-      value: "Everyone sends emails.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[0].bye
-      value: "Anyway, take your time !\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[1].greeting
-      value: "Good morning !\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[1].dialogue.Array.data[0]
-      value: "I remember the days you had to queue to get a stamp.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[1].dialogue.Array.data[1]
-      value: "I'd see hundreds of faces in a day\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[1].dialogue.Array.data[2]
-      value: "Now you're the only one.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[1].bye
-      value: "*Sigh*\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[2].greeting
-      value: Good morning!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[2].dialogue.Array.data[0]
-      value: "Damn... This has been 15 years since I've started to work here.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[2].dialogue.Array.data[1]
-      value: "And I never saw someone coming 3 times in a week.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[2].dialogue.Array.data[2]
-      value: "Are you waiting for a letter ?\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[2].bye
-      value: "I didn't receive anything for you\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[3].greeting
-      value: "Good morning !\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[3].dialogue.Array.data[0]
-      value: "Still nothing for you !\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[3].dialogue.Array.data[1]
-      value: "Do you happen to know if someone in town needs stamps ?\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[3].dialogue.Array.data[2]
-      value: "I have a ton of those pinky ones somewhere.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[3].bye
-      value: "Meh, nevermind, they're surely outdated.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[4].greeting
-      value: "Meh, nevermind, they're surely outdated.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[4].dialogue.Array.data[0]
       value: "I received a parcel !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[1]
+      value: "It's not for you though\r."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[2]
+      value: "Oh, the old lady sent you ? Alright,\nhere's the package !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].bye
+      value: 'Have a nice day!
+
+        (Can''t believe I delivered a parcel. Wow!)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].greeting
+      value: "Good morning !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[0]
+      value: "I'm quite surprised to see you !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[1]
+      value: "Nobody cares about letters and\nparcels anymore.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[2]
+      value: "Everyone sends emails.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].bye
+      value: "Anyway, take your time !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].greeting
+      value: Good morning !
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[0]
+      value: "I remember the days you had to queue\nto get a stamp.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[1]
+      value: "I'd see hundreds of faces in a day\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[2]
+      value: "Now you're the only one.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].bye
+      value: "*Sigh*\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].greeting
+      value: Good morning!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[0]
+      value: 'Damn... This has been 15 years since
+
+        I''ve started to work here.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[1]
+      value: 'And I never saw someone coming
+
+        3 times in a week.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[2]
+      value: "Are you waiting for a letter ?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].bye
+      value: "I didn't receive anything for you\r."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].greeting
+      value: Good morning !
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.data[0]
+      value: "Still nothing for you !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[1]
-      value: "It's not for you though\r"
+      value: 'Do you happen to know if someone
+
+        in town needs stamps ?'
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[2]
-      value: "I have a ton of those pinky ones somewhere.\r"
+      value: I have a ton of those pinky ones somewhere.
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].bye
-      value: "Oh, the old lady sent you ? Alright, here's the package !\r"
+      value: Meh, nevermind, they're surely outdated.
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].greeting
-      value: "Hello! Have you got my parcel?\r"
+      value: "Hello ! You'll never guess !\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[0]
-      value: "Ok, no hurry, the post office is in the eastern part of town.\r"
+      value: "I received a parcel !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[1]
-      value: "Fantastic! Finally, I will be able to spell \"Zygomatic\" again!\r"
+      value: "It's not for you though\r."
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -20705,7 +20887,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].bye
-      value: "I should go back there. Raoul and I had such a good time there.\r"
+      value: "Oh, the old lady sent you ? Alright, here's the package !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -21111,6 +21293,11 @@ Prefab:
       propertyPath: comfortZones.Array.data[0]
       value: 
       objectReference: {fileID: 991924683}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -21599,7 +21786,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].bye
-      value: "I don't know how to say bye in French. Goodbye then!\r"
+      value: "I don't know how to say bye in French.\nGoodbye then!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -21629,7 +21816,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].greeting
-      value: "Hello! I'm sorry I don't have any more croissant.\r"
+      value: "Hello! I'm sorry I don't have any\nmore croissant.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -21644,7 +21831,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].dialogue.Array.data[2]
-      value: "When you get there, say \"Bonjour\" on my behalf.\r"
+      value: "When you get there, say \"Bonjour\"\non my behalf.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -21669,7 +21856,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[2]
-      value: "Actually, I'm pretty sure they're the same thing.\r"
+      value: "Actually, I'm pretty sure they're the\nsame thing.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -21754,7 +21941,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[3]
-      value: "See, I've made so much progress. I practice everyday with my customers.\r"
+      value: "See, I've made so much progress.\nI practice everyday with my customers.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -21769,12 +21956,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[4]
-      value: "I think I could improve it even more if I travelled to France.\r"
+      value: "I think I could improve it even more if\nI travelled to France.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[5]
-      value: "But it is so far. I don't want to leave my bakery.\r"
+      value: "But it is so far. I don't want to leave\nmy bakery.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -21949,6 +22136,11 @@ Prefab:
       propertyPath: comfortZones.Array.data[0]
       value: 
       objectReference: {fileID: 284131246}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -22763,7 +22955,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[1]
-      value: "Or you didn't, but you give them a second chance ?\r"
+      value: "Or you didn't, but you give them a\nsecond chance ?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -22808,7 +23000,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[0]
-      value: "So, did you found out what the secret ingredient was ?\r"
+      value: "So, did you found out what the\nsecret ingredient was ?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -22908,12 +23100,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[3]
-      value: "When nobody's around, I sometimes eat a croissant !\r"
+      value: "When nobody's around, I sometimes\neat a croissant !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[3]
-      value: "If I ever leave town, I hope I'll meet you again !\r"
+      value: "If I ever leave town, I hope I'll meet\nyou again !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -23288,6 +23480,11 @@ Prefab:
       propertyPath: comfortZones.Array.data[0]
       value: 
       objectReference: {fileID: 1786727544}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -25831,6 +26028,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4631457794270874, guid: a56f82a19b1e5054085e2647ad0f2114,
     type: 2}
   m_PrefabInternal: {fileID: 1229820546}
+--- !u!224 &1237058313 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224320643355312656, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 542744441}
 --- !u!1001 &1237924458
 Prefab:
   m_ObjectHideFlags: 0
@@ -26547,6 +26749,22 @@ Transform:
   m_Father: {fileID: 2036692123}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1265080176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1389297433996910, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1066979043}
+--- !u!114 &1265080177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265080176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c003802db69962f459eb0f9515ed9b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1266117431
 Prefab:
   m_ObjectHideFlags: 0
@@ -33316,6 +33534,25 @@ MonoBehaviour:
   Player: {fileID: 2145933551}
   TimerStopped: 2
   Anim: {fileID: 1144174032}
+--- !u!1 &1662199146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1389297433996910, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 542744441}
+--- !u!114 &1662199147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1662199146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cae78c9c1b1c7549b8a4fcbdb495e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DayQuest: 5
+  TP_GrandMere: {fileID: 773843119}
+  Bulle: {fileID: 1237058313}
 --- !u!1001 &1665631397
 Prefab:
   m_ObjectHideFlags: 0
@@ -35591,7 +35828,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].dialogue.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -35700,22 +35937,22 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].greeting
-      value: "Hey ! You look bad, get in !\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
-        type: 2}
-      propertyPath: days.Array.data[0].dialogue.Array.data[0]
       value: "I saw you on the street\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
-      propertyPath: days.Array.data[0].dialogue.Array.data[1]
+      propertyPath: days.Array.data[0].dialogue.Array.data[0]
       value: "You seemed stressed out.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
-      propertyPath: days.Array.data[0].dialogue.Array.data[2]
+      propertyPath: days.Array.data[0].dialogue.Array.data[1]
       value: "Welcome to my coffee-shop !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[2]
+      value: It's a quiet and friendly place.
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -35740,7 +35977,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[2]
-      value: "I know visiting a new place can be scary sometimes.\r"
+      value: "I know visiting a new place can be\nscary sometimes.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -35875,12 +36112,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[3]
-      value: "Someday, we should go pique-nique together !\r"
+      value: "Someday, we should go pique-nique\ntogether !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[3]
-      value: "Would you like to leave town and travel with me ?\r"
+      value: "Would you like to leave town and travel\nwith me ?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -35890,7 +36127,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[6].dialogue.Array.data[4]
-      value: "You're right. I know I can do it. Thanks for being here.\r"
+      value: "You're right. I know I can do it.\nThanks for being here.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -35905,7 +36142,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[0].dialogue.Array.data[3]
-      value: It's a quiet and friendly place.
+      value: "Don't hesitate to rest a little bit !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -35970,7 +36207,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[1].dialogue.Array.data[4]
-      value: "You can really be surprised how welcoming people are !\r"
+      value: "You can really be surprised how\nwelcoming people are !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -36050,7 +36287,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].dialogue.Array.data[3]
-      value: "But you can always count on this place to welcome you\r"
+      value: "But you can always count on this\nplace to welcome you\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -36090,12 +36327,12 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[3].dialogue.Array.data[4]
-      value: "Sometimes I just wish I could travel one more time !\r"
+      value: "Sometimes I just wish I could travel\none more time !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[4].dialogue.Array.data[4]
-      value: "It's french for... Eating outside, sit on the ground.\r"
+      value: "It's french for... Eating outside,\nsit on the ground.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -36105,7 +36342,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[5].dialogue.Array.data[4]
-      value: "It's been a long time without leaving the shop for me !\r"
+      value: "It's been a long time without leaving\nthe shop for me !\r"
       objectReference: {fileID: 0}
     - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
       propertyPath: m_LocalScale.x
@@ -36210,6 +36447,11 @@ Prefab:
       propertyPath: comfortZones.Array.data[0]
       value: 
       objectReference: {fileID: 1213633420}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_IsPrefabAsset: 0
@@ -41256,6 +41498,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114553678450001726, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
@@ -43114,7 +43361,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  Stopped: 0
   comfortZone:
   - {fileID: 1295840955}
   - {fileID: 787111861}
@@ -43132,15 +43378,13 @@ MonoBehaviour:
   animator: {fileID: 2015775776}
   spriteRenderer: {fileID: 2015775774}
   isDiscomfort: 0
-  previousisDiscomfort: 0
-  cured: 0
-  timerDiscomfort: 0
-  discomfortPercentage: 0
   timerDiscomfortMax: 10
   timerDiscomfortMin: 20
   OwnComfort: {fileID: 1044686107}
   nbComfortZones: 0
   postProcessing: {fileID: 1998750849}
+  zoominside: 5
+  zoomoutside: 10
 --- !u!61 &2145933552
 BoxCollider2D:
   m_ObjectHideFlags: 0

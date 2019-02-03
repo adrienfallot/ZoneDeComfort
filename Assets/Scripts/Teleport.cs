@@ -52,11 +52,13 @@ public class Teleport : MonoBehaviour
 
             if (this.tag == "Exit")
             {
+                Coffee_Come_In.tempzoom = Player.zoomoutside;
                 PlayerController.currentzoom = Player.zoomoutside;
                 Camera.main.orthographicSize = PlayerController.currentzoom;
             }
             if (this.tag == "Enter")
             {
+                Coffee_Come_In.tempzoom = Player.zoominside;
                 PlayerController.currentzoom = Player.zoominside;
                 Camera.main.orthographicSize = PlayerController.currentzoom;
             }
