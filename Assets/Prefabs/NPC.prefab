@@ -291,10 +291,13 @@ MonoBehaviour:
   bulle: {fileID: 95476817284691390}
   textBulle: {fileID: 114223880132450692}
   NPCAnimator: {fileID: 95236419679518956}
+  NormalFont: {fileID: 12800000, guid: 28637d57bbea3eb4198ab90f8f4381b0, type: 3}
+  IncomfortFont: {fileID: 12800000, guid: 73dfd8863e8f6c64c9f2adc21bbeb154, type: 3}
   comfortZones: []
+  numberDialogue: 0
+  hasACroissant: 00000000000000
   days:
-  - hasACroissant: 0
-    greeting: Bonjours
+  - greeting: Bonjours
     dialogue:
     - Bla1
     - Bla2

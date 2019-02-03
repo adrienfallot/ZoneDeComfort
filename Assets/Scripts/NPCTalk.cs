@@ -8,20 +8,24 @@ public class NPCTalk : MonoBehaviour
     public Animator bulle;
     public Text textBulle;
     public Animator NPCAnimator;
+    public Font NormalFont, IncomfortFont;
 
     public ComfortZone[] comfortZones;
 
     private bool isTalking = false;
-    private bool bye = false;
+    [HideInInspector]
+    public bool bye = false;
     private bool bullePop = false;
 
-    private int numberText = 0;
-    [SerializeField]
+    [HideInInspector]
+    public int numberText = 0;
     private int numberDialogue = 0;
 
     public static List<NPCTalk> NPC;
 
     public bool[] hasACroissant = new bool[7];
+
+    private PlayerController ThePlayer;
 
     [System.Serializable]
     public struct Day
@@ -79,8 +83,23 @@ public class NPCTalk : MonoBehaviour
         }
     }
 
+    void SetFont ()
+    {
+        //Si je suis en zone de confort
+        if (!ThePlayer.isDiscomfort)
+        {
+            textBulle.font = NormalFont;
+        }
+        else //Si je suis en zone d'inconfort
+        {
+            textBulle.font = IncomfortFont;
+        }
+    }
+
     void Awake()
     {
+        ThePlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
         if (NPC == null)
         {
             NPC = new List<NPCTalk>();
@@ -94,6 +113,8 @@ public class NPCTalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SetFont();
+
         if (Input.GetButtonDown("Interact") && isTalking)
         {
             Day today = days[numberDialogue];

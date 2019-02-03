@@ -5600,6 +5600,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4631457794270874, guid: 8931f4fe9ed9c814bb279793049d247d,
     type: 2}
   m_PrefabInternal: {fileID: 372410605}
+--- !u!95 &372608353 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95476817284691390, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2011790305}
 --- !u!1001 &372960011
 Prefab:
   m_ObjectHideFlags: 0
@@ -8123,6 +8128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodoImage: {fileID: 1144174032}
+  stoptime: 2
 --- !u!61 &461048584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8136,7 +8142,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.079969406, y: -0.1417656}
+  m_Offset: {x: 6.720426, y: 0.3874712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8147,7 +8153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 47.627934, y: 48.205605}
+  m_Size: {x: 30.821228, y: 10.687237}
   m_EdgeRadius: 0
 --- !u!212 &461048585
 SpriteRenderer:
@@ -13499,8 +13505,49 @@ Prefab:
       propertyPath: ThePlayer
       value: 
       objectReference: {fileID: 2145933551}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61356e1f80e520848a7b9e7ddd73ffcd, type: 2}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1545722693
+      objectReference: {fileID: 0}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212857085251980290, guid: bae8fbe4733bc5544a06bf66c1a1ff31,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114355922135963528, guid: bae8fbe4733bc5544a06bf66c1a1ff31, type: 2}
+    - {fileID: 331551636674344634, guid: bae8fbe4733bc5544a06bf66c1a1ff31, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: bae8fbe4733bc5544a06bf66c1a1ff31, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &734380330 stripped
@@ -19430,6 +19477,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1877321835}
   m_Script: {fileID: 11500000, guid: 881d5676729e6e348884be93a90487ad, type: 3}
+--- !u!114 &995627213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114223880132450692, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2011790305}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1001499561
 GameObject:
   m_ObjectHideFlags: 0
@@ -19461,7 +19514,7 @@ Transform:
   - {fileID: 913421714}
   - {fileID: 1974957534}
   m_Father: {fileID: 1243594271}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1007169017
 Prefab:
@@ -19514,6 +19567,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4885214693318426, guid: e89d8962291130140b6af7777c8bdbca,
     type: 2}
   m_PrefabInternal: {fileID: 1007169017}
+--- !u!1 &1015412034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015412035}
+  m_Layer: 0
+  m_Name: Playerstart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1015412035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015412034}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -88.22, y: -172.35, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_Children:
+  - {fileID: 2145933553}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1015561563
 Prefab:
   m_ObjectHideFlags: 0
@@ -20401,7 +20483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 224699518469847324, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -23850,6 +23932,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4306515651716142, guid: f9b74789623c92945b74e2497b095664,
     type: 2}
   m_PrefabInternal: {fileID: 1134301448}
+--- !u!1 &1135160873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1389297433996910, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2011790305}
+--- !u!114 &1135160874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135160873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692f386330d4d6a479710bfad8e2540f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coffee_Owner: {fileID: 1302991399}
+  bulle: {fileID: 372608353}
+  textBulle: {fileID: 995627213}
+  newzoom: 20
+  speedzoom: 0.2
 --- !u!1001 &1143945562
 Prefab:
   m_ObjectHideFlags: 0
@@ -26018,6 +26121,7 @@ Transform:
   - {fileID: 830106336}
   - {fileID: 504922322}
   - {fileID: 1763310986}
+  - {fileID: 2011790306}
   - {fileID: 1066979044}
   - {fileID: 1001499562}
   m_Father: {fileID: 1674136895}
@@ -27423,6 +27527,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4885214693318426, guid: e89d8962291130140b6af7777c8bdbca,
     type: 2}
   m_PrefabInternal: {fileID: 1300434802}
+--- !u!114 &1302991399 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1763310985}
+  m_Script: {fileID: 11500000, guid: d87e82b7972572a43a0cc3857b816aff, type: 3}
 --- !u!1001 &1303178047
 Prefab:
   m_ObjectHideFlags: 0
@@ -32492,6 +32602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodoImage: {fileID: 1144174032}
+  stoptime: 2
 --- !u!61 &1623717107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32505,7 +32616,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.079969406, y: -0.1417656}
+  m_Offset: {x: 12.380883, y: -1.8899057}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -32516,7 +32627,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 47.627934, y: 48.205605}
+  m_Size: {x: 15.456339, y: 16.738605}
   m_EdgeRadius: 0
 --- !u!212 &1623717108
 SpriteRenderer:
@@ -40439,6 +40550,721 @@ MonoBehaviour:
   LeSprite: {fileID: 1261452571}
   speed: 0.1
   maxidle: 2
+  walking: 0
+--- !u!1001 &2011790305
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1243594271}
+    m_Modifications:
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: comfortZones.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 255.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224699518469847324, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224699518469847324, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224699518469847324, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224699518469847324, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224699518469847324, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224699518469847324, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224960031009789374, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224960031009789374, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389297433996910, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_Name
+      value: Coffee_bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 95236419679518956, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 6aff0284a34ca7f46b8a29138e4baabe,
+        type: 2}
+    - target: {fileID: 212584333182756734, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5e6558c3e817705478fa99a248b8cc57,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 2.2294903
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: 3.176702
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.y
+      value: -1.3397123
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.x
+      value: 1.10672
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].greeting
+      value: "Hey ! You look bad, get in !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[0]
+      value: "I saw you on the street\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[1]
+      value: "You seemed stressed out.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[2]
+      value: "Welcome to my coffee-shop !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].bye
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].greeting
+      value: "Ho ! Hi there !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[0]
+      value: You seem better today.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[1]
+      value: "What frightened you like that ?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[2]
+      value: "I know visiting a new place can be scary sometimes.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].bye
+      value: "Anyway, I'm glad you came back !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].greeting
+      value: "Hi !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[0]
+      value: "Happy to see you like this coffe-shop.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[1]
+      value: "I designed it to be a shelter for people.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[2]
+      value: "Sometimes, life gives you hard time.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].bye
+      value: "Make yourself at ease !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].greeting
+      value: "Hellooo !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[0]
+      value: "How's the weather outside ?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[1]
+      value: "You know, I'm not from this town.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[2]
+      value: "I've travelled quite a lot.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].bye
+      value: "One day, maybe !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].greeting
+      value: "\"Bonjur monne amy\" !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.data[0]
+      value: "It's French for \"Hello friend\" \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.data[1]
+      value: "I visited France once.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.data[2]
+      value: "They make awful coffee.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].bye
+      value: "It could be fun !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].greeting
+      value: "Sup mate ?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].dialogue.Array.data[0]
+      value: "It's fun talking to you !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].dialogue.Array.data[1]
+      value: "I never make friends...\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].dialogue.Array.data[2]
+      value: "I thought about something.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].bye
+      value: "Come and pick me up tomorrow !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].greeting
+      value: "So, you're ready ?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.data[0]
+      value: "Pfewh... Okay, let's do this.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.data[1]
+      value: "It's funny, I forgot what it feels.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.data[2]
+      value: "Wait, I'm not sure I can do this.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].bye
+      value: "So... Away we go !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.data[3]
+      value: "Someday, we should go pique-nique together !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].dialogue.Array.data[3]
+      value: "Would you like to leave town and travel with me ?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.data[3]
+      value: "What if someone... Maybe I should...\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.data[4]
+      value: "You're right. I know I can do it. Thanks for being here.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.data[5]
+      value: "I could become a Latte Artist !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[6].dialogue.Array.data[6]
+      value: "Maybe one day I'll go.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[3]
+      value: It's a quiet and friendly place.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[4]
+      value: "Don't hesitate to rest a little bit !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[5]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[6]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[7]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[8]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[9]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[10]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[11]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[12]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[13]
+      value: "\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[0].dialogue.Array.data[14]
+      value: "Ok, you win, you're sooooo goooood!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[3]
+      value: "But once you get used to it, and meet people\r."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[4]
+      value: "You can really be surprised how welcoming people are !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[5]
+      value: "You're it.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[6]
+      value: "I'm it.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[7]
+      value: "You're it.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[8]
+      value: "I'm it.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[9]
+      value: "You're it.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[10]
+      value: "Ok stop, I'm tired.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[11]
+      value: "I never thought standing up could be so tiring.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[12]
+      value: "Anyway, I won the contest.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[13]
+      value: "I'm the best tag player ever!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[14]
+      value: "Let's play a game of tag.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[15]
+      value: "Let's play a game of tag.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[16]
+      value: "Let's play a game of tag.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[17]
+      value: "Let's play a game of tag.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[18]
+      value: "Let's play a game of tag.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[1].dialogue.Array.data[19]
+      value: "Let's play a game of tag.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[3]
+      value: "But you can always count on this place to welcome you\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[4]
+      value: "Try to find out what it is !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[5]
+      value: "Is it you?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[6]
+      value: "Is it me?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[7]
+      value: "Is it nothing?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[8]
+      value: "It is nothing, then!\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[2].dialogue.Array.data[9]
+      value: "Yeah, I won, your turn!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[3]
+      value: "And even if I love this place...\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[3].dialogue.Array.data[4]
+      value: "Sometimes I just wish I could travel one more time !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.data[4]
+      value: "It's french for... Eating outside, sit on the ground.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[4].dialogue.Array.data[5]
+      value: "Do you know how to play \"Bellimey\"?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: days.Array.data[5].dialogue.Array.data[4]
+      value: "It's been a long time without leaving the shop for me !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989947220837868, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989947220837868, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989947220837868, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989947220837868, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61377869281161640, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61377869281161640, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989947220837868, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 61377869281161640, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.27611542
+      objectReference: {fileID: 0}
+    - target: {fileID: 61377869281161640, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 7.7430267
+      objectReference: {fileID: 0}
+    - target: {fileID: 61377869281161640, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.60744476
+      objectReference: {fileID: 0}
+    - target: {fileID: 61377869281161640, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 5.2028656
+      objectReference: {fileID: 0}
+    - target: {fileID: 224320643355312656, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 224320643355312656, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 224320643355312656, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223880132450692, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 28637d57bbea3eb4198ab90f8f4381b0,
+        type: 3}
+    - target: {fileID: 114223880132450692, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223880132450692, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223880132450692, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: comfortZones.Array.data[0]
+      value: 
+      objectReference: {fileID: 1213633420}
+    - target: {fileID: 58667930758404282, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Radius
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 212584333182756734, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95236419679518956, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61377869281161640, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: IncomfortFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 28637d57bbea3eb4198ab90f8f4381b0,
+        type: 3}
+    - target: {fileID: 114223880132450692, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_Text
+      value: "Hey ! You look bad, get in !\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 224320643355312656, guid: fa221312f7912104793491f258d9e8e9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: fa221312f7912104793491f258d9e8e9, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &2011790306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4922369074336232, guid: fa221312f7912104793491f258d9e8e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2011790305}
 --- !u!1001 &2012544142
 Prefab:
   m_ObjectHideFlags: 0
@@ -42346,13 +43172,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2145933549}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -88.22, y: -172.35, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2015775775}
   - {fileID: 1998750854}
   - {fileID: 734380330}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1015412035}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

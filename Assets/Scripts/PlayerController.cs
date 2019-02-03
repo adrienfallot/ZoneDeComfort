@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rigidBody2D;
-    public bool Stopped;
+    bool Stopped;
 
     [Header("Zone")]
     public Transform[] comfortZone;
@@ -19,29 +19,59 @@ public class PlayerController : MonoBehaviour
     public static bool croissant = false;
     public static bool hasQuest = false;
     public static bool hasPackage = false;
+    [HideInInspector]
     public bool isDiscomfort = false;
-    public bool previousisDiscomfort = false;
-    public bool cured = false;
+    bool previousisDiscomfort = false;
+    bool cured = false;
 
-    public float timerDiscomfort = 0.0f;
-    public float discomfortPercentage = 0f;
+    float timerDiscomfort = 0.0f;
+    float discomfortPercentage = 0f;
     public float timerDiscomfortMax = 10.0f;
     public float timerDiscomfortMin = 20.0f;
     public GameObject OwnComfort;
 
+    [HideInInspector]
     public int nbComfortZones = 0;
     private float closeZone;
 
     public PostProcessingBehaviour postProcessing;
     private PostProcessingProfile discomfortProfile;
 
+    private float timerstopped;
+    private float TimeStopped;
+
+    public static float currentzoom;
+    public float zoominside = 5f, zoomoutside = 10f;
+
     void Start()
     {
+        currentzoom = zoominside;
+
         AkSoundEngine.SetSwitch("SW_Game_Status", "Game", this.gameObject);
 
         rigidBody2D = this.GetComponent<Rigidbody2D>();
 
         discomfortProfile = postProcessing.profile;
+    }
+
+    public void StopPlayer(float mytime)
+    {
+        Stopped = true;
+        TimeStopped = mytime;
+    }
+
+    void StoppedPlayer()
+    {
+        //Je gère le timer si je téléporte depuis ici
+        if (Stopped && timerstopped <= TimeStopped)
+        {
+            timerstopped += Time.deltaTime;
+        }
+        else
+        {
+            timerstopped = 0f;
+            Stopped = false;
+        }
     }
 
     void IsInComfortZone()
@@ -220,6 +250,9 @@ public class PlayerController : MonoBehaviour
 
         //Est-ce que le perso est guéri?
         CuredFinally();
+
+        //Je gère le timer si le joueur est stoppé
+        StoppedPlayer();
     }
 
     float Map(float s, float a1, float a2, float b1, float b2)

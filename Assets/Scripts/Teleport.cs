@@ -20,7 +20,7 @@ public class Teleport : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Player.Stopped = true;
+            Player.StopPlayer(TimerStopped);
             teleporting = true;
             teleported = false;
             Anim.Play("Dodo", -1, 0f);
@@ -30,7 +30,7 @@ public class Teleport : MonoBehaviour
     void Update()
     {
         //Je gère le timer si je téléporte depuis ici
-        if ((Player.Stopped) && (teleporting))
+        if (teleporting)
         {
             timer += Time.deltaTime;
         }
@@ -42,19 +42,24 @@ public class Teleport : MonoBehaviour
         //Le timer est fini
         if (timer >= TimerStopped)
         {
-            Player.Stopped = false;
             teleporting = false;
         }
 
         //Je téléporte le perso et change la caméra à la moitié de l'anim (quand il fait tout noir)
-        if ((timer >= TimerStopped / 2f) && (!teleported))
+        if (timer >= TimerStopped / 2f && !teleported)
         {
             Player.transform.position = target.gameObject.transform.position;
 
             if (this.tag == "Exit")
-                Camera.main.orthographicSize = 10;
+            {
+                PlayerController.currentzoom = Player.zoomoutside;
+                Camera.main.orthographicSize = PlayerController.currentzoom;
+            }
             if (this.tag == "Enter")
-                Camera.main.orthographicSize = 5;
+            {
+                PlayerController.currentzoom = Player.zoominside;
+                Camera.main.orthographicSize = PlayerController.currentzoom;
+            }
 
             teleported = true;
         }
