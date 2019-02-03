@@ -31,6 +31,7 @@ public class Grand_mere_quest : MonoBehaviour
         if (PlayerController.hasPackage && !oncepackage)
         {
             transform.position = TP_GrandMere.position;
+            GetComponent<CircleCollider2D>().radius = 5;
             Bulle.localPosition = Vector3.up * 3;
             Bulle.localScale = Vector3.one * 0.008f;
             GrandMereTalk.numberDialogue += 2;
