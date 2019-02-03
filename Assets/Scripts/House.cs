@@ -11,7 +11,6 @@ public class House : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            AkSoundEngine.SetState("ST_Close_Home", "Close");
             DaysManager.StartDay();
         }
     }
@@ -20,12 +19,12 @@ public class House : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            AkSoundEngine.SetState("ST_Close_Home", "Affar");
-
             if (PlayerController.croissant)
             {
                 other.GetComponent<PlayerController>().StopPlayer(stoptime);
                 dodoImage.Play("Dodo", -1, 0f);
+
+                AkSoundEngine.PostEvent("P_Sleep", this.gameObject);
 
                 PlayerController.croissant = false;
                 DaysManager.dayNumber++;

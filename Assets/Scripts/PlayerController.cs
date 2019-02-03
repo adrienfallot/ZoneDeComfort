@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
         currentzoom = zoominside;
 
         AkSoundEngine.SetSwitch("SW_Game_Status", "Game", this.gameObject);
+        AkSoundEngine.SetState("ST_Close_Home", "Close");
 
         rigidBody2D = this.GetComponent<Rigidbody2D>();
 
@@ -77,7 +78,9 @@ public class PlayerController : MonoBehaviour
     void IsInComfortZone()
     {
         if (nbComfortZones > 0)
+        {
             isDiscomfort = false;
+        }
         else
             isDiscomfort = true;
     }
@@ -101,7 +104,6 @@ public class PlayerController : MonoBehaviour
         if (isDiscomfort)
         {
             AkSoundEngine.SetState("ST_Player_Confort", "No");
-            AkSoundEngine.PostEvent("Amb_Creep", this.gameObject);
         }
         else
         {
@@ -172,17 +174,27 @@ public class PlayerController : MonoBehaviour
 
     void DiscomfortPercentage()
     {
-        //Si je suis en phase croissante d'anxiété
-        if (timerDiscomfort <= timerDiscomfortMax)
+        if (isDiscomfort)
         {
-            discomfortPercentage = (timerDiscomfort / timerDiscomfortMax) * 100;
-            discomfortPercentage = Mathf.Clamp(Mathf.Max(discomfortPercentage, closeZone), 0, 100);
-        }
+            //Si je suis en phase croissante d'anxiété
+            if (timerDiscomfort <= timerDiscomfortMax)
+            {
+                discomfortPercentage = (timerDiscomfort / timerDiscomfortMax) * 100;
+                discomfortPercentage = Mathf.Clamp(Mathf.Max(discomfortPercentage, closeZone), 0, 100);
+            }
 
-        //Si je suis en phase décroissante d'anxiété
-        if ((timerDiscomfort >= timerDiscomfortMax) && (timerDiscomfort <= timerDiscomfortMin))
+            //Si je suis en phase décroissante d'anxiété
+            if ((timerDiscomfort >= timerDiscomfortMax) && (timerDiscomfort <= timerDiscomfortMin))
+            {
+                discomfortPercentage = 100 - (((timerDiscomfort - timerDiscomfortMax) / (timerDiscomfortMin - timerDiscomfortMax)) * 100);
+
+                if (discomfortPercentage < 0)
+                    discomfortPercentage = 0;
+            }
+        }
+        else //Sinon l'inconfort diminue vite
         {
-            discomfortPercentage = 100 - (((timerDiscomfort - timerDiscomfortMax) / (timerDiscomfortMin - timerDiscomfortMax)) * 100);
+            discomfortPercentage -= Time.deltaTime * 20;
 
             if (discomfortPercentage < 0)
                 discomfortPercentage = 0;
@@ -204,8 +216,6 @@ public class PlayerController : MonoBehaviour
 
     void PostProcessIncomfort()
     {
-        if (isDiscomfort)
-        {
             postProcessing.enabled = true;
 
             var grain = discomfortProfile.grain.settings;
@@ -216,12 +226,8 @@ public class PlayerController : MonoBehaviour
 
             discomfortProfile.grain.settings = grain;
             discomfortProfile.vignette.settings = vignette;
-        }
-        else
-        {
-            postProcessing.enabled = false;
-        }
     }
+
     // Update is called once per frame
     void Update()
     {
