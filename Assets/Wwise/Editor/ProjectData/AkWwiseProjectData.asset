@@ -21,13 +21,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a2ae9fd1ff21794cb802eeb5f55a8b86
-    m_lastTime: -8586527210845524508
+    m_lastTime: -8586521084241758171
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a2c427e91a22ad448e7cb3d02877197b
-    m_lastTime: -8586530693254286875
+    m_lastTime: -8586521084237379932
     List:
     - name: Main
       guid: 182a7be5e26a4641af1ce33488421e75
@@ -42,7 +42,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 73b4b124f94db54e9de3de164073079a
-    m_lastTime: -8586530050632209608
+    m_lastTime: -8586521084243165052
     List:
     - name: Amb_Cafe
       guid: 3db677a275cf7842ab7d6afd2d9a1e9e
@@ -128,6 +128,34 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Env_Room_Enter
+      guid: 85c4ab4bc4c3e444a720c72152251769
+      id: 3473760295
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Environnement
+        ObjectType: 4
+      - ElementName: Env_Room_Enter
+        ObjectType: 3
+      Path: Default Work Unit\Environnement\Env_Room_Enter
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Env_Room_Leave
+      guid: 0a076b6ce014274abd79450ba8a7885c
+      id: 3615062280
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Environnement
+        ObjectType: 4
+      - ElementName: Env_Room_Leave
+        ObjectType: 3
+      Path: Default Work Unit\Environnement\Env_Room_Leave
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Game_Start
       guid: 8dd91da4ca7ab6458d1eb30ccf132e26
       id: 733168346
@@ -179,6 +207,20 @@ MonoBehaviour:
       - ElementName: P_GameOver
         ObjectType: 3
       Path: Default Work Unit\Player\P_GameOver
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: P_Sleep
+      guid: 6c3f636b7a85ed428ca41a41f62e3f02
+      id: 2319977171
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: P_Sleep
+        ObjectType: 3
+      Path: Default Work Unit\Player\P_Sleep
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -242,7 +284,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 2069542c71a2224a9a9ae8ffbc421728
-    m_lastTime: -8586527210846853041
+    m_lastTime: -8586523734985793268
     List:
     - name: RTPC_D_Closest_Zone
       guid: fafd72ee3819df41b8f35bb3585e6c66
@@ -266,7 +308,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 929cab1ac522dc42a59f24eb22723733
-    m_lastTime: -8586527210845419223
+    m_lastTime: -8586523734984143887
     List:
     - name: ST_Close_Home
       guid: 12cdf12062ad7f4fb92551642dff4907
@@ -418,14 +460,22 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 98e012e53e64434a8a65e48a390ffbae
-    m_lastTime: -8586530875542146244
-    List: []
+    m_lastTime: -8586521084237164364
+    List:
+    - name: Sleep
+      guid: f8588a17817a6945830c735851847868
+      id: 3671647190
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sleep
+        ObjectType: 14
+      Path: Default Work Unit\Sleep
   ExpandedItems:
   - /GGJ19_SD_ZIK
   - /GGJ19_SD_ZIK/Events
   - /GGJ19_SD_ZIK/Events/Default Work Unit
   - /GGJ19_SD_ZIK/Events/Default Work Unit/Ambiance
-  - /GGJ19_SD_ZIK/Events/Default Work Unit/Environnement
   - /GGJ19_SD_ZIK/Events/Default Work Unit/Player
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

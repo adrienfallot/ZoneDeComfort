@@ -57,7 +57,10 @@ public class NPCTalk : MonoBehaviour
         {
             if (!bye)
             {
-                AkSoundEngine.PostEvent("Env_Greet_Nice", this.gameObject); //TODO: comfort/discomfort
+                if (!ThePlayer.isDiscomfort)
+                    AkSoundEngine.PostEvent("Env_Greet_Nice", this.gameObject); //TODO: comfort/discomfort
+                if (ThePlayer.isDiscomfort)
+                    AkSoundEngine.PostEvent("Env_Greet_Mean", this.gameObject);
 
                 textBulle.text = " " + days[numberDialogue].greeting + " ";
                 bulle.Play("Pop");

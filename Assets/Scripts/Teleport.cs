@@ -23,6 +23,11 @@ public class Teleport : MonoBehaviour
             Player.StopPlayer(TimerStopped);
             teleporting = true;
             teleported = false;
+            if (this.tag == "Exit")
+                AkSoundEngine.PostEvent("Env_Room_Leave", this.gameObject);
+            if (this.tag == "Enter")
+                AkSoundEngine.PostEvent("Env_Room_Enter", this.gameObject);
+
             Anim.Play("Dodo", -1, 0f);
         }
     }
