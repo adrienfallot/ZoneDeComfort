@@ -27,7 +27,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a2c427e91a22ad448e7cb3d02877197b
-    m_lastTime: -8586521084237379932
+    m_lastTime: -8586520240296853067
     List:
     - name: Main
       guid: 182a7be5e26a4641af1ce33488421e75
@@ -42,66 +42,10 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 73b4b124f94db54e9de3de164073079a
-    m_lastTime: -8586521084243165052
+    m_lastTime: -8586519569394834028
     List:
-    - name: Amb_Cafe
-      guid: 3db677a275cf7842ab7d6afd2d9a1e9e
-      id: 4024420889
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Ambiance
-        ObjectType: 4
-      - ElementName: Amb_Cafe
-        ObjectType: 3
-      Path: Default Work Unit\Ambiance\Amb_Cafe
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Amb_Creep
-      guid: 3c96be5714102e4396279a6b86be8579
-      id: 496664849
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Ambiance
-        ObjectType: 4
-      - ElementName: Amb_Creep
-        ObjectType: 3
-      Path: Default Work Unit\Ambiance\Amb_Creep
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Amb_Night
-      guid: 25c8b44dc0a2b2419a2c7b824be5a342
-      id: 2125145056
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Ambiance
-        ObjectType: 4
-      - ElementName: Amb_Night
-        ObjectType: 3
-      Path: Default Work Unit\Ambiance\Amb_Night
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Amb_Street
-      guid: 1f232d7652e44a4394de9bdff21ee810
-      id: 1592801615
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Ambiance
-        ObjectType: 4
-      - ElementName: Amb_Street
-        ObjectType: 3
-      Path: Default Work Unit\Ambiance\Amb_Street
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Env_Greet_Mean
-      guid: 2aec5fc945327046bbe338dc710a145c
+      guid: 94e2d9192820de4880823ada6f45be5b
       id: 1185755620
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -168,48 +112,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: P_Comfort_Create
-      guid: 215b614ff89e534cbd80312d793e5673
-      id: 1842260389
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: P_Comfort_Create
-        ObjectType: 3
-      Path: Default Work Unit\Player\P_Comfort_Create
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: P_Comfort_Extend
-      guid: 288a6dc82cb8b148b44df9985ac4aa81
-      id: 2748895709
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: P_Comfort_Extend
-        ObjectType: 3
-      Path: Default Work Unit\Player\P_Comfort_Extend
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: P_GameOver
-      guid: fb69b9176599f747a7b7aa90da1cb7f9
-      id: 844915450
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: P_GameOver
-        ObjectType: 3
-      Path: Default Work Unit\Player\P_GameOver
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: P_Sleep
       guid: 6c3f636b7a85ed428ca41a41f62e3f02
       id: 2319977171
@@ -235,20 +137,6 @@ MonoBehaviour:
       - ElementName: P_Success
         ObjectType: 3
       Path: Default Work Unit\Player\P_Success
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: P_Success_Final
-      guid: 3b457011f8039246a49a5b36fae06cbb
-      id: 3240909698
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: P_Success_Final
-        ObjectType: 3
-      Path: Default Work Unit\Player\P_Success_Final
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -284,7 +172,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 2069542c71a2224a9a9ae8ffbc421728
-    m_lastTime: -8586523734985793268
+    m_lastTime: -8586519569394814248
     List:
     - name: RTPC_D_Closest_Zone
       guid: fafd72ee3819df41b8f35bb3585e6c66
@@ -295,20 +183,11 @@ MonoBehaviour:
       - ElementName: RTPC_D_Closest_Zone
         ObjectType: 13
       Path: Default Work Unit\RTPC_D_Closest_Zone
-    - name: RTPC_Health
-      guid: 1687c249c6a56449b8b95131adbc86d7
-      id: 2474978741
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: RTPC_Health
-        ObjectType: 13
-      Path: Default Work Unit\RTPC_Health
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 929cab1ac522dc42a59f24eb22723733
-    m_lastTime: -8586523734984143887
+    m_lastTime: -8586519569393636103
     List:
     - name: ST_Close_Home
       guid: 12cdf12062ad7f4fb92551642dff4907
@@ -338,34 +217,6 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: None
           ObjectType: 8
-    - name: ST_Game_Running
-      guid: a47ed661bbe40a46b2d2466070d786e9
-      id: 3101108469
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: ST_Game_Running
-        ObjectType: 9
-      Path: Default Work Unit\ST_Game_Running
-      values:
-      - name: None
-        guid: 5274746191904c45afa4489aadd38c1d
-        id: 748895195
-        PathAndIcons:
-        - ElementName: None
-          ObjectType: 8
-      - name: Paused
-        guid: 855db2988301a24c9361807bb4859ad7
-        id: 319258907
-        PathAndIcons:
-        - ElementName: Paused
-          ObjectType: 8
-      - name: Running
-        guid: a13c6f6118b42d41bf96ab904d1bae29
-        id: 3863236874
-        PathAndIcons:
-        - ElementName: Running
-          ObjectType: 8
     - name: ST_Player_Confort
       guid: dd95ca855676844aa3044dd73a70b7a9
       id: 3384181978
@@ -393,34 +244,6 @@ MonoBehaviour:
         id: 979470758
         PathAndIcons:
         - ElementName: Yes
-          ObjectType: 8
-    - name: ST_Time
-      guid: 1e262eec202c2547a621723beb9a61cb
-      id: 2591331092
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: ST_Time
-        ObjectType: 9
-      Path: Default Work Unit\ST_Time
-      values:
-      - name: Day
-        guid: 73c163a37cfde741b4c11c72d469a979
-        id: 311764537
-        PathAndIcons:
-        - ElementName: Day
-          ObjectType: 8
-      - name: Night
-        guid: 5f48f0cef7b78a4989380444ca181d62
-        id: 1011622525
-        PathAndIcons:
-        - ElementName: Night
-          ObjectType: 8
-      - name: None
-        guid: f97813c4c1e57a48a156c84eaa67b991
-        id: 748895195
-        PathAndIcons:
-        - ElementName: None
           ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -473,9 +296,5 @@ MonoBehaviour:
       Path: Default Work Unit\Sleep
   ExpandedItems:
   - /GGJ19_SD_ZIK
-  - /GGJ19_SD_ZIK/Events
-  - /GGJ19_SD_ZIK/Events/Default Work Unit
-  - /GGJ19_SD_ZIK/Events/Default Work Unit/Ambiance
-  - /GGJ19_SD_ZIK/Events/Default Work Unit/Player
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

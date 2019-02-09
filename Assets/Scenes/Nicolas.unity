@@ -21928,7 +21928,7 @@ Prefab:
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
       propertyPath: days.Array.data[2].dialogue.Array.data[1]
-      value: "They're croissants are nice too.\r"
+      value: "Their croissants are nice too.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114654116592397844, guid: fa221312f7912104793491f258d9e8e9,
         type: 2}
@@ -43635,7 +43635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6a9cfbae7f6ca418f064483f82b900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 10
   comfortZone:
   - {fileID: 1295840955}
   - {fileID: 787111861}
