@@ -9,6 +9,8 @@ public class Coffee_Come_In : MonoBehaviour
     public NPCTalk Coffee_Owner;
     public Animator bulle;
     public Text textBulle;
+    [SerializeField]
+    private PlayerController ThePlayer;
 
     public float newzoom;
     public float speedzoom;
@@ -36,7 +38,8 @@ public class Coffee_Come_In : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             timerzoom = 0;
-            tempzoom = LaCamera.orthographicSize;
+            if (!ThePlayer.Stopped) //Pour éviter le problème du café
+                tempzoom = LaCamera.orthographicSize;
             isTalking = false;
         }
     }

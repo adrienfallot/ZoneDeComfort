@@ -13,12 +13,28 @@ public class ComfortZone : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        ThePlayer.nbComfortZones--;
+        if (other.CompareTag("Player"))
+        {
+            ThePlayer.nbComfortZones--;
+        }
+
+        if (other.CompareTag("NPC"))
+        {
+            other.GetComponentInParent<NPCTalk>().IsInDiscomfortZone = true;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        ThePlayer.nbComfortZones++;
+        if (other.CompareTag("Player"))
+        {
+            ThePlayer.nbComfortZones++;
+        }
+
+        if (other.CompareTag("NPC"))
+        {
+            other.GetComponentInParent<NPCTalk>().IsInDiscomfortZone = false;
+        }
     }
 
     public void Expend()

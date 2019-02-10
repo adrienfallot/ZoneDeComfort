@@ -8,7 +8,7 @@ public class DaysManager : MonoBehaviour
 
 	public static void StartDay()
 	{
-		AkSoundEngine.SetState("ST_Time", "Day");
+		//AkSoundEngine.SetState("ST_Time", "Day");
 	}
 
 	public static void FinishDay()

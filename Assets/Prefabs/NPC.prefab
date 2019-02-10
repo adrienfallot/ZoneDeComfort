@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114654116592397844}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,9 +93,10 @@ GameObject:
   - component: {fileID: 212584333182756734}
   - component: {fileID: 95236419679518956}
   - component: {fileID: 61377869281161640}
+  - component: {fileID: 50706295896083652}
   m_Layer: 0
   m_Name: NPCSprite
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +129,26 @@ Transform:
   m_Father: {fileID: 4922369074336232}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50706295896083652
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856534114765442}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58667930758404282
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -142,7 +163,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 5
 --- !u!61 &61377869281161640
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -289,11 +310,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulle: {fileID: 95476817284691390}
+  bulleCanvas: {fileID: 225972234951593752}
   textBulle: {fileID: 114223880132450692}
   NPCAnimator: {fileID: 95236419679518956}
   NormalFont: {fileID: 12800000, guid: 28637d57bbea3eb4198ab90f8f4381b0, type: 3}
   IncomfortFont: {fileID: 12800000, guid: 73dfd8863e8f6c64c9f2adc21bbeb154, type: 3}
+  IsInDiscomfortZone: 1
   comfortZones: []
+  bye: 0
+  numberText: 0
   numberDialogue: 0
   hasACroissant: 00000000000000
   days:

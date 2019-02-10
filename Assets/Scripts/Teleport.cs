@@ -5,7 +5,7 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     [SerializeField]
-    private Teleport target;
+    private Transform target;
     [SerializeField]
     private PlayerController Player;
     [SerializeField]
@@ -53,15 +53,15 @@ public class Teleport : MonoBehaviour
         //Je téléporte le perso et change la caméra à la moitié de l'anim (quand il fait tout noir)
         if (timer >= TimerStopped / 2f && !teleported)
         {
-            Player.transform.position = target.gameObject.transform.position;
+            Player.transform.position = target.position;
 
-            if (this.tag == "Exit")
+            if (CompareTag("Exit"))
             {
                 Coffee_Come_In.tempzoom = Player.zoomoutside;
                 PlayerController.currentzoom = Player.zoomoutside;
                 Camera.main.orthographicSize = PlayerController.currentzoom;
             }
-            if (this.tag == "Enter")
+            if (CompareTag("Enter"))
             {
                 Coffee_Come_In.tempzoom = Player.zoominside;
                 PlayerController.currentzoom = Player.zoominside;

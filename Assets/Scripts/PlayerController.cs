@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rigidBody2D;
-    bool Stopped;
+    [HideInInspector]
+    public bool Stopped;
 
     [Header("Zone")]
     public Transform[] comfortZone;
@@ -21,13 +22,13 @@ public class PlayerController : MonoBehaviour
     public static bool hasPackage = false;
     [HideInInspector]
     public bool isDiscomfort = false;
-    bool previousisDiscomfort = false;
     bool cured = false;
 
     float timerDiscomfort = 0.0f;
     float discomfortPercentage = 0f;
     public float timerDiscomfortMax = 10.0f;
-    public float timerDiscomfortMin = 20.0f;
+    public float timerPlateau = 20.0f;
+    public float timerDiscomfortMin = 30.0f;
     public GameObject OwnComfort;
 
     [HideInInspector]
@@ -85,20 +86,6 @@ public class PlayerController : MonoBehaviour
             isDiscomfort = true;
     }
 
-    void StartedDiscomfort()
-    {
-        //Si j'ai pas bougé il se passe rien
-        if (previousisDiscomfort == isDiscomfort)
-            return;
-        else
-        //Si ça a bougé et que je suis en état d'inconfort, je viens de passer dans cet état, donc je reset le timer
-            if (isDiscomfort)
-            timerDiscomfort = 0.0f;
-
-        //Je save l'état d'inconfort
-        previousisDiscomfort = isDiscomfort;
-    }
-
     void SetSound()
     {
         if (isDiscomfort)
@@ -151,6 +138,20 @@ public class PlayerController : MonoBehaviour
     {
         if (isDiscomfort)
             timerDiscomfort += Time.deltaTime;
+
+        if (!isDiscomfort) //Sinon l'inconfort diminue vite
+        {
+            //S'il est dans la phase décroissante, je le replace au temps proportionnellement équivalent en phase de croissance
+            if (timerDiscomfort >= timerPlateau)
+            {
+                timerDiscomfort = (timerDiscomfortMin - timerDiscomfort) / (timerDiscomfortMin - timerPlateau) * timerDiscomfortMax;
+            }
+
+            timerDiscomfort -= Time.deltaTime * 10;
+
+            if (timerDiscomfort < 0)
+                timerDiscomfort = 0;
+        }
     }
 
     void DistComfortZone()
@@ -174,38 +175,28 @@ public class PlayerController : MonoBehaviour
 
     void DiscomfortPercentage()
     {
-        if (isDiscomfort)
+        //Si je suis en phase croissante d'anxiété
+        if (timerDiscomfort <= timerDiscomfortMax)
         {
-            //Si je suis en phase croissante d'anxiété
-            if (timerDiscomfort <= timerDiscomfortMax)
-            {
-                discomfortPercentage = (timerDiscomfort / timerDiscomfortMax) * 100;
-                discomfortPercentage = Mathf.Clamp(Mathf.Max(discomfortPercentage, closeZone), 0, 100);
-            }
-
-            //Si je suis en phase décroissante d'anxiété
-            if ((timerDiscomfort >= timerDiscomfortMax) && (timerDiscomfort <= timerDiscomfortMin))
-            {
-                discomfortPercentage = 100 - (((timerDiscomfort - timerDiscomfortMax) / (timerDiscomfortMin - timerDiscomfortMax)) * 100);
-
-                if (discomfortPercentage < 0)
-                    discomfortPercentage = 0;
-            }
+            discomfortPercentage = (timerDiscomfort / timerDiscomfortMax) * 100;
+            discomfortPercentage = Mathf.Clamp(Mathf.Max(discomfortPercentage, closeZone), 0, 100);
         }
-        else //Sinon l'inconfort diminue vite
+
+        //Si je suis en phase décroissante d'anxiété
+        if ((timerDiscomfort >= timerPlateau) && (timerDiscomfort <= timerDiscomfortMin))
         {
-            discomfortPercentage -= Time.deltaTime * 20;
+            discomfortPercentage = 100 - (((timerDiscomfort - timerPlateau) / (timerDiscomfortMin - timerPlateau)) * 100);
 
             if (discomfortPercentage < 0)
                 discomfortPercentage = 0;
         }
-
+        
         //Si je suis au bout du timer je suis guéri
         if (timerDiscomfort >= timerDiscomfortMin)
             cured = true;
     }
 
-    void CuredFinally ()
+    void CuredFinally()
     {
         if (cured)
         {
@@ -216,16 +207,16 @@ public class PlayerController : MonoBehaviour
 
     void PostProcessIncomfort()
     {
-            postProcessing.enabled = true;
+        postProcessing.enabled = true;
 
-            var grain = discomfortProfile.grain.settings;
-            var vignette = discomfortProfile.vignette.settings;
+        var grain = discomfortProfile.grain.settings;
+        var vignette = discomfortProfile.vignette.settings;
 
-            grain.intensity = (discomfortPercentage / 100);
-            vignette.intensity = (discomfortPercentage / 100);
+        grain.intensity = (discomfortPercentage / 100);
+        vignette.intensity = (discomfortPercentage / 100);
 
-            discomfortProfile.grain.settings = grain;
-            discomfortProfile.vignette.settings = vignette;
+        discomfortProfile.grain.settings = grain;
+        discomfortProfile.vignette.settings = vignette;
     }
 
     // Update is called once per frame
@@ -244,9 +235,6 @@ public class PlayerController : MonoBehaviour
 
         //Je modifie l'effet de postprocessing correctement
         PostProcessIncomfort();
-
-        //Je check si je viens de passer en inconfort
-        StartedDiscomfort();
 
         //Si je suis en inconfort, j'augmente l'état d'inconfort
         IncreaseTimerDiscomfort();

@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class NPCTalk : MonoBehaviour
 {
     public Animator bulle;
+    public CanvasGroup bulleCanvas;
     public Text textBulle;
     public Animator NPCAnimator;
     public Font NormalFont, IncomfortFont;
+    [HideInInspector]
+    public bool IsInDiscomfortZone = true;
 
     public ComfortZone[] comfortZones;
 
@@ -19,7 +22,7 @@ public class NPCTalk : MonoBehaviour
 
     [HideInInspector]
     public int numberText = 0;
-    //[HideInInspector]
+    [HideInInspector]
     public int numberDialogue = 0;
 
     public static List<NPCTalk> NPC;
@@ -64,9 +67,7 @@ public class NPCTalk : MonoBehaviour
 
                 textBulle.text = " " + days[numberDialogue].greeting + " ";
                 bulle.Play("Pop");
-                bullePop = true;
             }
-
             isTalking = true;
         }
     }
@@ -89,14 +90,14 @@ public class NPCTalk : MonoBehaviour
 
     void SetFont()
     {
-        //Si je suis en zone de confort
-        if (!ThePlayer.isDiscomfort)
-        {
-            textBulle.font = NormalFont;
-        }
-        else //Si je suis en zone d'inconfort
+        //Si je suis en dehors des zones de conforts
+        if (IsInDiscomfortZone)
         {
             textBulle.font = IncomfortFont;
+        }
+        else //Si je suis en zone de confort
+        {
+            textBulle.font = NormalFont;
         }
     }
 
@@ -131,6 +132,7 @@ public class NPCTalk : MonoBehaviour
                 }
                 else
                 {
+                    bulle.Play("Pop", -1, 0);
                     textBulle.text = " " + today.dialogue[numberText] + " ";
                     numberText++;
                     bye = today.dialogue.Length == numberText;
@@ -150,7 +152,7 @@ public class NPCTalk : MonoBehaviour
 
                 if (!bullePop)
                 {
-                    bulle.Play("Pop");
+                    bulle.Play("Pop", -1, 0);
                     bullePop = true;
                 }
             }
@@ -164,17 +166,22 @@ public class NPCTalk : MonoBehaviour
         //Si j'ai parlé totalement à la personne
         if (bye)
         {
-            //Je m'assure de pas dépasser le nombre de jour total du perso
-            if (numberDialogue != days.Length - 1)
-                numberDialogue++;
-
-            if (hasACroissant[numberDialogue])
-                NPCAnimator.SetBool("Walking", true); //croissant
-
-            //J'augmente la taille de la zone de confort
-            foreach (var comfortZone in comfortZones)
+            //Si le perso est pas dans une zone d'inconfort
+            if (!IsInDiscomfortZone)
             {
-                comfortZone.Expend();
+                //Je m'assure de pas dépasser le nombre de jour total du perso
+                if (numberDialogue != days.Length - 1)
+                    numberDialogue++;
+
+                if (hasACroissant[numberDialogue])
+                    NPCAnimator.SetBool("Walking", true); //croissant
+
+                //J'augmente la taille de la zone de confort
+                foreach (var comfortZone in comfortZones)
+                {
+                    comfortZone.gameObject.SetActive(true);
+                    comfortZone.Expend();
+                }
             }
         }
 
