@@ -28,7 +28,7 @@ public class Teleport : MonoBehaviour
             if (this.tag == "Enter")
                 AkSoundEngine.PostEvent("Env_Room_Enter", this.gameObject);
 
-            Anim.Play("Dodo", -1, 0f);
+            Anim.Play("Dodo", -1, 0f);            
         }
     }
 
@@ -54,6 +54,14 @@ public class Teleport : MonoBehaviour
         if (timer >= TimerStopped / 2f && !teleported)
         {
             Player.transform.position = target.position;
+
+            //Si j'ai activé la quête de l'ami
+            if (PlayerController.friendquest)
+            {
+                //J'active l'ami qui suit, je désactive l'ami qui suit pas
+                Player.Coffee_friend.SetActive(true);
+                Player.Coffee_owner.gameObject.SetActive(false);
+            }
 
             if (CompareTag("Exit"))
             {

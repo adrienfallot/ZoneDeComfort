@@ -44,6 +44,13 @@ public class PlayerController : MonoBehaviour
     public static float currentzoom;
     public float zoominside = 5f, zoomoutside = 10f;
 
+    public static bool IsWithFriend;
+    [SerializeField]
+    public GameObject Coffee_friend;
+    [SerializeField]
+    public NPCTalk Coffee_owner;
+    public static bool friendquest;
+
     void Awake()
     {
         currentzoom = zoominside;
@@ -54,6 +61,15 @@ public class PlayerController : MonoBehaviour
         rigidBody2D = this.GetComponent<Rigidbody2D>();
 
         discomfortProfile = postProcessing.profile;
+    }
+
+    void ActivateFriend ()
+    {
+        //Si j'ai activé la quête du coffee owner
+        if (Coffee_owner.numberDialogue == Coffee_owner.days.Length - 1 && Coffee_owner.bye)
+        {
+            friendquest = true;
+        }
     }
 
     public void StopPlayer(float mytime)
@@ -247,6 +263,9 @@ public class PlayerController : MonoBehaviour
 
         //Je gère le timer si le joueur est stoppé
         StoppedPlayer();
+
+        //J'active la quête de l'ami si c'est bon
+        ActivateFriend();
     }
 
     float Map(float s, float a1, float a2, float b1, float b2)

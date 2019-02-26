@@ -9,32 +9,25 @@ public class ComfortZone : MonoBehaviour
 
     public float scaleFactor;
     public int maxNbScale;
-    private int nbScale;
+    //[HideInInspector]
+    public int nbScale;
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
             ThePlayer.nbComfortZones--;
-        }
 
         if (other.CompareTag("NPC"))
-        {
             other.GetComponentInParent<NPCTalk>().IsInDiscomfortZone = true;
-        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
             ThePlayer.nbComfortZones++;
-        }
 
         if (other.CompareTag("NPC"))
-        {
             other.GetComponentInParent<NPCTalk>().IsInDiscomfortZone = false;
-        }
     }
 
     public void Expend()

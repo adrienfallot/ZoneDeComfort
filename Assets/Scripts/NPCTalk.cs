@@ -22,7 +22,7 @@ public class NPCTalk : MonoBehaviour
 
     [HideInInspector]
     public int numberText = 0;
-    [HideInInspector]
+    //[HideInInspector]
     public int numberDialogue = 0;
 
     public static List<NPCTalk> NPC;
@@ -52,7 +52,6 @@ public class NPCTalk : MonoBehaviour
 
     [Header("Texts")]
     public Day[] days;
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
