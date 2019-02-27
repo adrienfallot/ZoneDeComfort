@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
     public static bool hasPackage = false;
     [HideInInspector]
     public bool isDiscomfort = false;
-    bool cured = false;
+    [HideInInspector]
+    public bool cured = false;
 
     float timerDiscomfort = 0.0f;
     float discomfortPercentage = 0f;

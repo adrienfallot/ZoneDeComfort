@@ -59,9 +59,9 @@ public class NPCTalk : MonoBehaviour
         {
             if (!bye)
             {
-                if (!ThePlayer.isDiscomfort)
+                if (!ThePlayer.isDiscomfort || ThePlayer.cured) //Si le joueur est à l'aise je fait le son sympa
                     AkSoundEngine.PostEvent("Env_Greet_Nice", this.gameObject); //TODO: comfort/discomfort
-                if (ThePlayer.isDiscomfort)
+                else //Sinon sauf si le joueur est guéri je fait le son qui fait peur
                     AkSoundEngine.PostEvent("Env_Greet_Mean", this.gameObject);
 
                 textBulle.text = " " + days[numberDialogue].greeting + " ";
